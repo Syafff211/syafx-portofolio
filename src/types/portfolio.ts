@@ -1,0 +1,11 @@
+export type SkillCategory='Frontend'|'Backend'|'Database'|'DevOps'|'Tools'|'Other'
+export type ProjectCategory='Web'|'Mobile'|'UI/UX'|'Other'
+export type MessageStatus='unread'|'read'|'replied'|'archived'
+export interface Profile{id:string;name:string;title:string;headline:string;bio:string;avatar:string;email:string;phone:string;location:string;cvUrl:string;availability:boolean;about:string}
+export interface Skill{id:string;name:string;category:SkillCategory;icon:string;level:number|null;order:number;published:boolean}
+export interface Project{id:string;title:string;slug:string;thumbnail:string;gallery:string[];description:string;content:string;category:ProjectCategory;technologies:string[];liveUrl:string;githubUrl:string;featured:boolean;published:boolean;projectDate:string|null;createdAt:string;updatedAt:string}
+export interface Experience{id:string;position:string;company:string;location:string;startDate:string;endDate:string|null;current:boolean;description:string;technologies:string[];order:number;published:boolean}
+export interface Education{id:string;institution:string;degree:string;field:string;startDate:string;endDate:string|null;description:string;logo:string;order:number;published:boolean}
+export interface Message{id:string;name:string;email:string;subject:string;message:string;status:MessageStatus;createdAt:string}
+export interface SocialMedia{id:string;platform:string;url:string;icon:string;active:boolean;order:number}
+export interface SiteSettings{id:string;siteTitle:string;siteDescription:string;favicon:string;logo:string;darkMode:boolean;lightMode:boolean;primaryColor:string;accentColor:string;metaTitle:string;metaDescription:string;keywords:string[];ogImage:string;email:string;whatsapp:string;location:string}
